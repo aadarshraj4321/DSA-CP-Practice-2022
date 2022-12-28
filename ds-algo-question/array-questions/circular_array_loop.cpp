@@ -41,7 +41,7 @@ bool isCircularLoop(std::vector<int>arr)
 		int val = arr[slow];
 		while(val * arr[slow] > 0)
 		{
-			int x = arr[slow];
+			int x = slow;
 			slow = nextIndex(arr, slow);
 			arr[x] = 0;
 		}
