@@ -34,6 +34,7 @@ int longestConsecutiveSub(std::vector<int>arr)
 
 int main()
 {
+{
 	std::vector<int>arr;
 	int n;
 	std::cin >> n;
