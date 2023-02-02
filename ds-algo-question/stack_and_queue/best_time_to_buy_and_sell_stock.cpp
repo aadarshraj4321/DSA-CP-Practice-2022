@@ -44,7 +44,7 @@ int main()
 		arr.push_back(x);
 	}	
 
-	std::cout << maxProfitBuySellStock(arr) << '\n';
+	std::cout << "maxProfit " << maxProfitBuySellStock(arr) << '\n';
 
 	return 0;
 }
