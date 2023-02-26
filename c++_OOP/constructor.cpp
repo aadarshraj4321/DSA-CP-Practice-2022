@@ -21,7 +21,7 @@ int main()
 	s5->displayData();
 
 	std::cout << "Parametrized Constructor with 2 paramter Called" << '\n';
-	Student s6(111, 21);
+	Student s6(112, 21);
 	s6.displayData();
 
 	Student *s7 = new Student(222, 18);

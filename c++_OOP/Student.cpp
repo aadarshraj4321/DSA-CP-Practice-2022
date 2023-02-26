@@ -16,17 +16,17 @@ public:
 	}
 
 	// Parametrized Constructor
-	Student(int r)
+	Student(int rollNumber)
 	{
 		std::cout << "Constructor 2 Called" << '\n';
-		rollNumber = r;
+		this->rollNumber = rollNumber;
 	}
 
-	Student(int r, int a)
+	Student(int rollNumber, int age)
 	{
 		std::cout << "Constructor 3 Called" << '\n';
-		rollNumber = r;
-		age = a;
+		this->rollNumber = rollNumber;
+		this->age = age;
 	}
 
 	void displayData()
