@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 
-// O(n^2)
+// O(n^2) = O(n ** 2)
 bool isPrime(int n)
 {
 	if(n <= 1)
@@ -17,7 +17,7 @@ bool isPrime(int n)
 }
 
 
-// O(nlogn)
+// O(nlogn) = O(n ** logn)
 bool isPrimeTwo(int n)
 {
 	if(n <= 1)
