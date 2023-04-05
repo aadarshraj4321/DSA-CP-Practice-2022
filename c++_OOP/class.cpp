@@ -3,6 +3,8 @@
 #include "Student.cpp"
 
 
+
+// main function
 int main()
 {
 	// Create object statically
