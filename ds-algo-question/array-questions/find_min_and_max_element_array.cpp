@@ -5,6 +5,7 @@ using namespace std;
 
 pair<long long, long long> getMinMax(long long a[], int n) ;
 
+// main function
 int main() {
     int t;
     cin >> t;
