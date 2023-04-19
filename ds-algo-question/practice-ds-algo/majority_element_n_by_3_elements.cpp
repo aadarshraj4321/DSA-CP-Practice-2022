@@ -55,6 +55,7 @@ std::vector<int>majorityElement(std::vector<int>arr)
 }
 
 
+// main function
 int main()
 {
 
