@@ -27,6 +27,7 @@ int main()
 	Student *s6 = new Student;
 	s6->setAge(100);
 	s6->rollNumber = 110;
+	// Display the class data
 	s6->displayData();
 	std::cout << '\n';
 	std::cout << s6->getAge() << '\n';
