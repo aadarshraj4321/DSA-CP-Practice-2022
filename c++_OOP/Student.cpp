@@ -1,5 +1,5 @@
 
-
+// student class
 class Student 
 {
 public:
