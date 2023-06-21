@@ -38,6 +38,29 @@ int main()
 	Student *s6 = new Student;
 	Student *s7 = new Student(36);
 	s7->display();
+	std::cout << '\n';
 
+
+
+	// Copy Constructor
+	Student *s8 = new Student(*s7);
+	s8->display();
+
+
+	std::cout << "\n----------------------------------------------------\n";
+
+
+	// Copy Constructor Operator
+	Student s9(10001);
+	Student s10(2001);
+
+	Student *s11 = new Student(9000);
+
+
+	s10 = *s11;
+	s10.display();
+
+	*s11 = s9;
+	s9 = s10;
 
 }
