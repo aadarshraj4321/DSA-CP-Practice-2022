@@ -29,4 +29,18 @@ public:
 	{
 		id = a;
 	}
+
+
+	// Default Constructor
+	Student()
+	{
+		std::cout << "Default constructor called\n";
+	}
+
+
+	// Parametrized Constructor 
+	Student(int rollNumber)
+	{
+		this->rollNumber = rollNumber;
+	}
 };

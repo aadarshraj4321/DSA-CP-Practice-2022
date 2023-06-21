@@ -31,4 +31,13 @@ int main()
 	std::cout << s5->age << " " << s5->rollNumber << " " << s5->getID() << '\n';
 	//s5->display();
 
+
+
+	std::cout << "--------------------\n";
+
+	Student *s6 = new Student;
+	Student *s7 = new Student(36);
+	s7->display();
+
+
 }
