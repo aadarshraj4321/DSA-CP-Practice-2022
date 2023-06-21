@@ -43,4 +43,10 @@ public:
 	{
 		this->rollNumber = rollNumber;
 	}
+
+
+	~Student()
+	{
+		std::cout << "Destructor called\n";
+	}
 };

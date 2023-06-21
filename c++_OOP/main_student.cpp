@@ -63,4 +63,7 @@ int main()
 	*s11 = s9;
 	s9 = s10;
 
+
+	delete s11;
+
 }
