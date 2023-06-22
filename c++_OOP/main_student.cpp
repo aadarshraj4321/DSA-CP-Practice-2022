@@ -66,4 +66,8 @@ int main()
 
 	delete s11;
 
+
+	// Copy Constructor
+	Student *s12 = new Student *s11;
+
 }
