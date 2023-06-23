@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include "Students.cpp"
+#include "InitializationClass.cpp"
 
 
 
@@ -15,4 +16,7 @@ int main()
 	Student s2(21, name);
 	s2.display();
 	s1.display();
+
+	Students s3(200, 100101);
+	s3.display();
 }
