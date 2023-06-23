@@ -22,4 +22,17 @@ class Student
 		{
 			std::cout << name << " " << age << '\n';
 		}
+
+
+
+		// Copy Constructor is Shallow Copy
+		Student(Student const &s)
+		{
+			this->name = s.name;
+			this->age = s.age; // Shallow Copy
+
+			// Deep Copy
+			this->name = new char[strlen(s.name) + 1];
+			strcpy(this->name, s.name);
+		}
 };
