@@ -30,6 +30,12 @@ int main()
 	Fraction f4 = f1 + f2;
 	std::cout << "F4 : ";
 	f4.print();
+	
+
+	std::cout << "--------------------------------------------\n";
+	
+	++f4;
+	f4.print();
 
 
 	return 0;

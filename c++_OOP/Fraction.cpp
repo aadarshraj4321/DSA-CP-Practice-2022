@@ -64,6 +64,14 @@ class Fraction
 
 
 
+		// Overload pre-increment operator which is "++"
+		void operator++()
+		{
+			numerator = numerator + denominator;
+			simplify();
+		}
+
+
 		Fraction add(Fraction const &f2)
 		{
 			int lcm = this->denominator * f2.denominator;
