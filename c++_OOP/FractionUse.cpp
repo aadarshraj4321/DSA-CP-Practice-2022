@@ -33,9 +33,17 @@ int main()
 	
 
 	std::cout << "--------------------------------------------\n";
-	
+
 	++f4;
 	f4.print();
+
+	Fraction f5 = f4++;
+	f4.print();
+	f5.print();
+
+	f5 += f3;
+	f5.print();
+	f3.print();
 
 
 	return 0;

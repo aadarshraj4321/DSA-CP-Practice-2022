@@ -72,6 +72,31 @@ class Fraction
 		}
 
 
+		// Overload post-increment operator which is "++"
+		Fraction operator++(int)
+		{
+			Fraction fNew(numerator, denominator);
+			numerator = numerator + denominator;
+			simplify();
+			fNew.simplify();
+			return fNew;
+		}
+
+
+		Fraction& operator+=(Fraction const &f2)
+		{
+			int lcm = this->denominator * f2.denominator;
+			int x = lcm / this->denominator;
+			int y = lcm / f2.denominator;
+
+			int num = x * this->numerator + (y * f2.numerator);
+			this->numerator = num;
+			this->denominator = lcm;
+			simplify();
+			return *this;
+		}
+
+
 		Fraction add(Fraction const &f2)
 		{
 			int lcm = this->denominator * f2.denominator;
