@@ -39,7 +39,8 @@ class Fraction
 		}
 
 
-		void add(Fraction const &f2)
+		// Add two fraction object with Operator Overloading with symbol : "+" 
+		Fraction operator+(Fraction const &f2) const
 		{
 			int lcm = this->denominator * f2.denominator;
 			int x = lcm / this->denominator;
@@ -47,11 +48,54 @@ class Fraction
 
 			int  num = x * this->numerator + (y * f2.numerator);
 
-			this->numerator = num;
-			this->denominator = lcm;
-
-			simplify();
+			// this->numerator = num;
+			// this->denominator = lcm;
+			
+			Fraction fNew(num, lcm);
+			fNew.simplify();
+			return fNew;
 		}
+
+
+		bool operator==(Fraction const &f2) const
+		{
+			return (numerator == f2.numerator && denominator == f2.denominator);
+		}
+
+
+
+		Fraction add(Fraction const &f2)
+		{
+			int lcm = this->denominator * f2.denominator;
+			int x = lcm / this->denominator;
+			int y = lcm / f2.denominator;
+
+			int  num = x * this->numerator + (y * f2.numerator);
+
+			// this->numerator = num;
+			// this->denominator = lcm;
+			
+			Fraction fNew(num, lcm);
+			fNew.simplify();
+			return fNew;
+		}
+
+
+
+
+		// void add(Fraction const &f2)
+		// {
+		// 	int lcm = this->denominator * f2.denominator;
+		// 	int x = lcm / this->denominator;
+		// 	int y = lcm / f2.denominator;
+
+		// 	int  num = x * this->numerator + (y * f2.numerator);
+
+		// 	this->numerator = num;
+		// 	this->denominator = lcm;
+
+		// 	simplify();
+		// }
 
 
 
