@@ -18,4 +18,11 @@ int main()
 
 	std::cout << n1.data << " " << n2.data << " " << n3.data << '\n';
 	std::cout << head->data << " " << head->next->data << " " << head->next->next->data << '\n';
+
+	printLL(head);
+
+	std::cout << "----------------------\n";
+
+	Node *mainHead = takeInput();
+	printLL(mainHead);
 }
