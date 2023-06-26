@@ -8,12 +8,14 @@ int main()
 {
 	// Statically
 	Node n1(10);
+	Node *head = &n1;
 	Node n2(20);
 	Node n3(30);
 
-	n1.next = &n2;
+	head->next = &n2;
 	n2.next = &n3;
 
 
 	std::cout << n1.data << " " << n2.data << " " << n3.data << '\n';
+	std::cout << head->data << " " << head->next->data << " " << head->next->next->data << '\n';
 }
