@@ -30,6 +30,14 @@ void thisIsMap()
 
 
 
+	auto it = mp.find(3);
+	std::cout << *(it).second << '\n';
+
+
+	auto it = mp.find(5);
+
+
+
 }
 
 
