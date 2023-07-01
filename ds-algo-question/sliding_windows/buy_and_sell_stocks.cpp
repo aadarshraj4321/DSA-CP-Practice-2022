@@ -8,7 +8,7 @@ int buySellStocks(std::vector<int>arr)
 	int left = 0;
 	int right = 1;
 
-	while(right < arr.size() - 1)
+	while(right <= arr.size() - 1)
 	{
 		if(arr[left] < arr[right])
 		{
