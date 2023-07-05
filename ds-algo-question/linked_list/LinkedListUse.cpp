@@ -30,7 +30,9 @@ int main()
 	std::cout << "-----------------------------------------\n";
 
 
-	insertNode(mainHead, 2, 999);
+	mainHead = insertNode(mainHead, 2, 999);
+	mainHead = insertNode(mainHead, 10, 1100);
+	mainHead = insertNode(mainHead, 0, 888);
 	printLL(mainHead);
 
 }

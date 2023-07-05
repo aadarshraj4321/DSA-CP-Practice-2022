@@ -56,18 +56,30 @@ class Node
 
 
 
-	void insertNode(Node *head, int i, int data)
+	Node *insertNode(Node *head, int i, int data)
 	{
 		Node *temp = head;
+		Node *newNode = new Node(data);
 		int cnt = 0;
 
-		while(cnt < i - 1)
+		if(i == 0)
+		{
+			newNode -> next = head;
+			head = newNode;
+			return head;
+		}
+
+		while(temp != NULL && cnt < i - 1)
 		{
 			temp = temp -> next;
 			cnt++;
 		}
 
-		Node *newNode = new Node(data);
-		newNode -> next = temp -> next;
-		temp -> next = newNode;
+		if(temp != NULL)
+		{	
+			newNode -> next = temp -> next;
+			temp -> next = newNode;
+		}
+
+		return head;
 	}
