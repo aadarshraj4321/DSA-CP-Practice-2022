@@ -53,3 +53,21 @@ class Node
 		}
 		return head;
 	}
+
+
+
+	void insertNode(Node *head, int i, int data)
+	{
+		Node *temp = head;
+		int cnt = 0;
+
+		while(cnt < i - 1)
+		{
+			temp = temp -> next;
+			cnt++;
+		}
+
+		Node *newNode = new Node(data);
+		newNode -> next = temp -> next;
+		temp -> next = newNode;
+	}

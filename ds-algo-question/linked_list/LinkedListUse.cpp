@@ -25,4 +25,12 @@ int main()
 
 	Node *mainHead = takeInput();
 	printLL(mainHead);
+
+	std::cout << '\n';
+	std::cout << "-----------------------------------------\n";
+
+
+	insertNode(mainHead, 2, 999);
+	printLL(mainHead);
+
 }
