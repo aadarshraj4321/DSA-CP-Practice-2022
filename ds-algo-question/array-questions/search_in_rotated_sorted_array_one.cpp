@@ -40,7 +40,7 @@ int searchInRotSortArrayOne(std::vector<int>arr, int target)
 int main()
 {
 	std::vector<int>arr = {4, 5, 6, 1, 2, 3};
-	std::cout << searchInRotSortArrayOne(arr, 6) << '\n';
+	std::cout << searchInRotSortArrayOne(arr, 3) << '\n';
 
 	return 0;
 }
