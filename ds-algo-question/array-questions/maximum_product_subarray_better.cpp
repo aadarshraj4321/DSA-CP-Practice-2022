@@ -41,12 +41,34 @@ int maximumProductSubarrayBetter(std::vector<int>arr)
 
 
 
+
+int maximumProductSubarrayOptimal(std::vector<int>arr)
+{
+	int maxiProduct = INT_MIN;
+	int prefixProduct = 1, suffixProduct = 1;
+	for(int i = 0; i < arr.size(); i++)
+	{
+		if(prefixProduct == 0) prefixProduct = 1;
+		if(suffixProduct == 0) suffixProduct = 1;
+
+		prefixProduct *= arr[i];
+		suffixProduct *= arr[arr.size() - i - 1];
+
+		maxiProduct = std::max(maxiProduct, std::max(suffixProduct, prefixProduct));
+	}
+	return maxi;
+}
+
+
+
+
 int main()
 {
 
 	std::vector<int>arr = {2, 3, 2, 4};
 	std::cout << maximumProductSubarrayBrute(arr) << '\n';
 	std::cout << maximumProductSubarrayBetter(arr) << '\n';
+	std::cout << maximumProductSubarrayOptimal(arr) << '\n';
 
 	return 0;
 }
