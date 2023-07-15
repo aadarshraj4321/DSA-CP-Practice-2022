@@ -23,8 +23,9 @@ int squareRootNumberOptimal(int n)
 
 	while(left <= right)
 	{
-		int mid = (left + right) / 2;
-		if(mid * mid <= n) 
+		long long mid = (left + right) / 2;
+		long long val = (mid * mid);
+		if(val <= n) 
 		{
 			ans = mid;
 			left = mid + 1;
