@@ -20,6 +20,23 @@ int findNthRootOfMBrute(int n, int m)
 
 
 
+long long squareHelper(int mid, int n, int m)
+{
+	// if finalAns == m // return 1
+	// if finalAns > m // return 2
+	// if finalAns < m // return 0
+
+	long long finalAns = 1;
+	for(int i = 1; i <= n; i++)
+	{
+		finalAns *= mid;
+		if(finalAns > m) return 2;
+	}
+
+	if(finalAns == m) return 1;
+	else return 0;
+}
+
 
 int findNthRootOfOptimal(int n, int m)
 {
@@ -27,15 +44,11 @@ int findNthRootOfOptimal(int n, int m)
 
 	while(left <= right)
 	{
-		int mid = (left + right) / 2;
-		long long finalAns = 1;
-		for(int i = 1; i <= n; i++)
-		{
-			finalAns *= mid;
-		}
-		if(finalAns == m) return mid;
-		else if(finalAns < m) left = mid + 1;
-		else right = mid - 1;
+		long long mid = (left + right) / 2;
+		long long result = squareHelper(mid, n, m);
+		if(result == 1) return mid;
+		if(result == 0) left = mid + 1;
+		if(result == 2) right = mid - 1;
 	}
 	return -1;
 }
@@ -48,7 +61,8 @@ int findNthRootOfOptimal(int n, int m)
 int main()
 {
 
-	int n = 3, m = 27;
+	int n = 9, m = 1953125;
+	//int n = 3, m = 27;
 	std::cout << findNthRootOfMBrute(n, m) << '\n';
 	std::cout << findNthRootOfOptimal(n, m) << '\n';
 
