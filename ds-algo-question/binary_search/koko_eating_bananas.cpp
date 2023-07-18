@@ -26,12 +26,13 @@ int totalHoursTake(std::vector<int>arr, int hour)
 
 
 
+
 int minimumNumberToEatBananas(std::vector<int>arr, int hours)
 {
 	int left = 1, right = findMaxElement(arr);
 	int finalAns = INT_MAX;
 
-	while(left <= right)
+	while(left <= right) 
 	{
 		int mid = (left + right) / 2;
 		int totalHours = totalHoursTake(arr, mid);
