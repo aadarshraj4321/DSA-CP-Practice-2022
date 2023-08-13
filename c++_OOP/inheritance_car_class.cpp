@@ -9,6 +9,16 @@ class Car: public Vehicle
 
 public:
 
+	Car()
+	{
+		std::cout << "Car class Constructor Called" << '\n';
+	}
+
+	~Car()
+	{
+		std::cout << "Car class Deconstructor Called" << '\n';
+	}
+
 	int numOfGears;
 	void printValue()
 	{

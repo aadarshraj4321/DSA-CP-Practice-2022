@@ -2,9 +2,10 @@
 #include "inheritance_car_class.cpp"
 
 
-
 int main()
 {
+	Vehicle v;
+
 	Car c;
 	c.color = "red";
 	c.numOfGears = 6;

@@ -11,5 +11,14 @@ class Vehicle
 	public:
 		std::string color;
 
+	Vehicle()
+	{
+		std::cout << "Vehicle Class Constructor Called" << '\n';
+	}
 
+	~Vehicle()
+	{
+		std::cout << "Vehicle Class Deconstructor Called" << '\n';
+	}
+	
 };
