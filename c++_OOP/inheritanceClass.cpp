@@ -10,6 +10,22 @@ class Vehicle
 	public:
 		std::string color;
 
+		Vehicle()
+		{
+			std::cout << "Constructor Called" << '\n';
+		}
+
+		Vehicle(int speed)
+		{
+			std::cout << "Vehicle: Parametrized Constructor Called\n";
+			maxSpeed = speed;
+		}
+
+		~Vehicle()
+		{
+			std::cout << "Destructor Called\n";
+		}
+
 	protected:
 		int numOfTyres;
 
@@ -21,6 +37,16 @@ class Truck : public Vehicle
 	public:
 		int numOfGears;
 		std::string brand;
+
+		Truck() : Vehicle(6)
+		{
+			std::cout << "Constructor Called" << '\n';
+		}
+
+		~Truck()
+		{
+			std::cout << "Destructor Called\n";
+		}
 };
 
 
@@ -34,7 +60,7 @@ class Truck : public Vehicle
 
 int main()
 {
-	Truck truck1, truck2;
+	Truck truck1;
 
 	truck1.numOfGears = 7;
 	truck1.brand = "TATA";
