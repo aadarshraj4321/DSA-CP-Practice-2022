@@ -57,6 +57,7 @@ int main()
 
 	c.Car :: printDisplay();
 	c.Truck :: printDisplay();
+	
 	//c.Vehicle :: printDisplay();	
 
 	return 0;
