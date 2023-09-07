@@ -13,6 +13,7 @@ class Vehicle
 };
 
 
+
 class Truck : public Vehicle
 {
 	public:
