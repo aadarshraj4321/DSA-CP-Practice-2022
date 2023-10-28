@@ -87,7 +87,22 @@ TreeNode<int>* takeInputLevelWise()
 
 
 
+void preOrderTraversal(TreeNode<int>* root)
+{
+	if(root == NULL) return;
 
+	std::cout << root->data << " ";
+	for(int i = 0; i < root->children.size(); i++)
+	{
+		preOrderTraversal(root->children[i]);
+	}
+}
+
+
+
+
+
+// tree = 1 3 2 3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
 
 
 int main()
@@ -103,8 +118,8 @@ int main()
 
 	//TreeNode<int>* root = takeInput();
 	TreeNode<int>* root = takeInputLevelWise();
-	printTree(root);
-
+	//printTree(root);
+	preOrderTraversal(root);
 
 	return 0;
 }

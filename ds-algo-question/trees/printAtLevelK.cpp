@@ -87,6 +87,23 @@ TreeNode<int>* takeInputLevelWise()
 
 
 
+void printAtLevelK(TreeNode<int>* root, int k)
+{
+	if(root  == NULL) return;
+
+	if(k == 0)
+	{
+		std::cout << root->data << '\n';
+		return;
+	}
+
+	for(int i = 0; i < root->children.size(); i++)
+	{
+		printAtLevelK(root->children[i], k - 1);
+	}
+}
+
+
 
 
 
@@ -104,6 +121,8 @@ int main()
 	//TreeNode<int>* root = takeInput();
 	TreeNode<int>* root = takeInputLevelWise();
 	printTree(root);
+	std::cout << '\n';
+	printAtLevelK(root, 2);
 
 
 	return 0;

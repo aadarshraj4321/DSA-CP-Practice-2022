@@ -87,6 +87,23 @@ TreeNode<int>* takeInputLevelWise()
 
 
 
+int numNodes(TreeNode<int>* root)
+{
+	int ans = 1;
+	for(int i = 0; i < root->children.size(); i++)
+	{
+		ans += numNodes(root->children[i]);
+	}
+	return ans;
+}
+
+
+
+int heightOfTree(TreeNode<int>* root)
+{
+	
+}
+
 
 
 
@@ -104,6 +121,8 @@ int main()
 	//TreeNode<int>* root = takeInput();
 	TreeNode<int>* root = takeInputLevelWise();
 	printTree(root);
+	std::cout << '\n';
+	std::cout << numNodes(root) << '\n';
 
 
 	return 0;

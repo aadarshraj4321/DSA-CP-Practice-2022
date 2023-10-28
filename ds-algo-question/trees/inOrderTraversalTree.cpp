@@ -87,7 +87,15 @@ TreeNode<int>* takeInputLevelWise()
 
 
 
+void inOrderTraversal(TreeNode<int>* root)
+{
 
+}
+
+
+
+
+// tree = 1 3 2 3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
 
 
 int main()
@@ -104,7 +112,8 @@ int main()
 	//TreeNode<int>* root = takeInput();
 	TreeNode<int>* root = takeInputLevelWise();
 	printTree(root);
-
+	
+	
 
 	return 0;
 }

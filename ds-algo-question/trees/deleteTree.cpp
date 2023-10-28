@@ -12,6 +12,14 @@ class TreeNode
 		{
 			this->data = data;
 		}
+
+		// ~TreeNode()
+		// {
+		// 	for(int i = 0; i < children.size(); i++)
+		// 	{
+		// 		delete children[i];
+		// 	}
+		// }
 };
 
 
@@ -87,8 +95,19 @@ TreeNode<int>* takeInputLevelWise()
 
 
 
+void deleteTree(TreeNode<int>* root)
+{
+	for(int i = 0; i < root->children.size(); i++)
+	{
+		deleteTree(root->children[i]);
+	}
+
+	delete root;
+}
 
 
+// tree = 1 3 2 3 4 2 5 6 2 7 8 0 0 0 0 1 9 0
+ 
 
 int main()
 {
@@ -103,8 +122,9 @@ int main()
 
 	//TreeNode<int>* root = takeInput();
 	TreeNode<int>* root = takeInputLevelWise();
-	printTree(root);
-
+	deleteTree(root);
+	
+	// delete root
 
 	return 0;
 }
